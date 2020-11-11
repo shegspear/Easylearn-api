@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 });
 
 // CONNECT TO DB
-mongoose.connect(process.env.DB_CONNECTION3,
+mongoose.connect('mongodb+srv://EasylearnDB:EasylearnDB1234@cluster0.svkux.mongodb.net/EasylearnDB?retryWrites=true&w=majority',
 { 
   useNewUrlParser: true,
   useUnifiedTopology: true 
