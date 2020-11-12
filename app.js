@@ -5,6 +5,8 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 require('dotenv/config');
 
+app.use(cors());
+
 const port = process.env.PORT || 3000;
 
 // APP
@@ -16,7 +18,7 @@ const postsRoute = require('./routes/posts');
 // MIDDLWARE
 app.use(bodyParser.json());
 app.use('/courses', postsRoute);
-app.use(cors());
+
 
 // ROUTES
 app.get('/', (req, res) => {
